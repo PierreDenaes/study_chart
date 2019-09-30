@@ -56,10 +56,6 @@
 		    <input type="text" name="name" id="name" required>
 		  </div>
 		  <div class="form-study">
-		    <label for="firstname">Enter your first Name</label>
-		    <input type="text" name="firstname" id="firstname" required>
-		  </div>
-		  <div class="form-study">
 		    <input type="submit" value="Sign!">
 		  </div>
 		</form>
