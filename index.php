@@ -50,6 +50,19 @@
 				<li>le matériel tu respecteras</li>
 			</ul>
 		</div>
+		<form action="" method="get" class="form-study">
+		  <div class="form-study">
+		    <label for="name">Enter Name: </label>
+		    <input type="text" name="name" id="name" required>
+		  </div>
+		  <div class="form-study">
+		    <label for="firstname">Enter your first Name</label>
+		    <input type="text" name="firstname" id="firstname" required>
+		  </div>
+		  <div class="form-study">
+		    <input type="submit" value="Subscribe!">
+		  </div>
+		</form>
 	</div>
 	
 </body>
