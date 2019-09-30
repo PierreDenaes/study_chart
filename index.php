@@ -56,7 +56,14 @@
 		    <input type="text" name="name" id="name" required>
 		  </div>
 		  <div class="form-study">
-		    <input type="submit" value="Sign!">
+		    <input type="submit" name="sign" value="Sign!">
+		  </div>
+		  <div>
+		  	<p>
+		  		<?php
+echo $_POST['name'];
+?>
+		  	</p>
 		  </div>
 		</form>
 	</div>
