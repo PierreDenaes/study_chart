@@ -50,7 +50,7 @@
 				<li>le matériel tu respecteras</li>
 			</ul>
 		</div>
-		<form action="" method="get" class="form-study">
+		<form action="db.php" method="post" class="form-study">
 		  <div class="form-study">
 		    <label for="name">Enter Name: </label>
 		    <input type="text" name="name" id="name" required>
