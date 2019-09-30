@@ -60,7 +60,7 @@
 		    <input type="text" name="firstname" id="firstname" required>
 		  </div>
 		  <div class="form-study">
-		    <input type="submit" value="Subscribe!">
+		    <input type="submit" value="Sign!">
 		  </div>
 		</form>
 	</div>
