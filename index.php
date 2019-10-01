@@ -12,27 +12,27 @@
 		<div class="section1">
 			<h2 class="sousTitre">Fonctionnement global de la promo / Boon of the tiger</h2>
 			<ul class="listChart">
-				<li>le confort de tou.te.s en compte tu prendras</li>
-				<li>des locaux propres tu préserveras</li>
-				<li>collectivement le vendredi tu rangeras</li>
-				<li>ta météo brièvement tu feras</li>
-				<li>la veille tu respecteras</li>
-				<li>la feuille de présence tu signeras</li>
-				<li>dans le travail concentré tu seras</li>
+				<li>_ le confort de tou.te.s en compte tu prendras</li>
+				<li>_ des locaux propres tu préserveras</li>
+				<li>_ collectivement le vendredi tu rangeras</li>
+				<li>_ ta météo brièvement tu feras</li>
+				<li>_ la veille tu respecteras</li>
+				<li>_ la feuille de présence tu signeras</li>
+				<li>_ dans le travail concentré tu seras</li>
 			</ul>
 		</div>
 		<div class="section2">
 			<h2 class="sousTitre">Etat d'esprit / vision / Hidden war</h2>
 			<ul class="listChart">
-				<li>à la réussite collective tu oeuvreras</li>
-				<li>plus haut que ton cul ne pèteras</li>
-				<li>quand la parole tu prendras l'attention tu auras</li>
-				<li>au bien être de tous tu veilleras</li>
-				<li>dans le partage tu travailleras</li>
-				<li>avec patience et persévérance tu apprendras</li>
-				<li>ton utopote tu respecteras</li>
-				<li>ton esprit ouvert tu garderas</li>
-				<li>en autonomie tu feras mais l'esprit de groupe tu protègeras</li>
+				<li>_ à la réussite collective tu oeuvreras</li>
+				<li>_ plus haut que ton cul ne pèteras</li>
+				<li>_ quand la parole tu prendras l'attention tu auras</li>
+				<li>_ au bien être de tous tu veilleras</li>
+				<li>_ dans le partage tu travailleras</li>
+				<li>_ avec patience et persévérance tu apprendras</li>
+				<li>_ ton utopote tu respecteras</li>
+				<li>_ ton esprit ouvert tu garderas</li>
+				<li>_ en autonomie tu feras mais l'esprit de groupe tu protègeras</li>
 			</ul>
 		</div>
 		<div class="section3">
@@ -40,15 +40,15 @@
 				Engagements de l'apprenant.e / ligthningcrushers
 			</h2>
 			<ul class="listChart">
-				<li>assidu tu seras</li>
-				<li>le temps de parole tu respecteras</li>
-				<li>tes formateurs tu respecteras</li>
-				<li>l'entraide tu pratiqueras</li>
-				<li>ta curiosité tu aiguiseras</li>
-				<li>ta connaissance constamment tu élargiras</li>
-				<li>dans tes recherches, méthodique tu seras</li>
-				<li>ces règles tu appliqueras</li>
-				<li>le matériel tu respecteras</li>
+				<li>_ assidu tu seras</li>
+				<li>_ le temps de parole tu respecteras</li>
+				<li>_ tes formateurs tu respecteras</li>
+				<li>_ l'entraide tu pratiqueras</li>
+				<li>_ ta curiosité tu aiguiseras</li>
+				<li>_ ta connaissance constamment tu élargiras</li>
+				<li>_ dans tes recherches, méthodique tu seras</li>
+				<li>_ ces règles tu appliqueras</li>
+				<li>_ le matériel tu respecteras</li>
 			</ul>
 		</div>	
 	</div>
@@ -69,17 +69,14 @@ try {
 } catch (PDOException $e) {
     echo 'Connexion échouée : ' . $e->getMessage();
 }
+// Récupération des noms
 $result = $dbh->query('SELECT nom FROM infos_tbl ORDER BY ID DESC LIMIT 0, 22');
 
 while($donnees = $result->fetch())
 {
 	echo '<p>'.htmlspecialchars($donnees['nom']).'</p>';
 }
-
-
 ?>
-</div>
-
-	
+		</div>	
 </body>
 </html>
