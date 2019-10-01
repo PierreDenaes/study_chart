@@ -70,6 +70,7 @@ try {
     echo 'Connexion échouée : ' . $e->getMessage();
 }
 $result = $dbh->query('SELECT nom FROM infos_tbl ORDER BY ID DESC LIMIT 0, 22');
+
 while($donnees = $result->fetch())
 {
 	echo '<p>'.htmlspecialchars($donnees['nom']).'</p>';
