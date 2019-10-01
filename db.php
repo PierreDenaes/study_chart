@@ -11,4 +11,6 @@ if (isset ($_POST['sign'])){
                 $sth = $dbh->prepare("INSERT INTO infos_tbl (nom) VALUES(?)");
                 $sth->execute(array($_POST['name']));
             }
+header('Location: index.php');
+
 ?>

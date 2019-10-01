@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans|Mansalva&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: radial-gradient(circle, rgba(63,180,58,1) 0%, rgba(246,253,29,1) 48%, rgba(252,69,69,1) 100%);
+	text-align: center;
+	font-family: 'Fira Sans', sans-serif; 
+}
+.titreP {
+	display: inline-block;
+	border: 1px solid white;
+	padding: 2%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+.container {
+	display: flex;
+	flex: auto;
+}
+@media screen and (max-width: 720px) {
+	.container {
+		flex-direction: column;
+	}
+	.section1, .section2, .section3 {
+		width: 90%;
+	}
+}
+ul {
+	list-style-type: none;
+}
+.section1, .section2, .section3 {
+	text-align: left;
+	padding: 2%;
+	margin: 1%;
+	border: 1px solid black;
+	border-radius: 20px 0 0 0;
+	
+}
+.section1 {
+	box-shadow: 6px 5px 5px green;
+}
+.section2 {
+	box-shadow: 6px 5px 5px yellow;
+}
+.section3 {
+	box-shadow: 6px 5px 5px red;
+}
+.sousTitre {
+	padding-bottom: 5%;
+}
+.padButton input {
+	margin-top: 2%;
+}
+.padLabel {
+	margin-top: 2%;
+}
+
+.allNames {
+	border: 2px solid black;
+	border-radius: 50px;
+	width: 20%;
+	margin: 2% auto;
+	padding: 2%;
+	background-color: white;
+	font-family: 'Mansalva', cursive;
+}

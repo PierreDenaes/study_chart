@@ -4,10 +4,11 @@
 	<meta charset="UTF-8">
 	<title>Charte des apprenant.e.s</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
+	<h1 class="titreP">Charte des apprenant.e.s</h1>
 	<div class="container">
-		<h1 class="titreP">Charte des apprenant.e.s</h1>
 		<div class="section1">
 			<h2 class="sousTitre">Fonctionnement global de la promo / Boon of the tiger</h2>
 			<ul class="listChart">
@@ -49,24 +50,35 @@
 				<li>ces règles tu appliqueras</li>
 				<li>le matériel tu respecteras</li>
 			</ul>
-		</div>
-		<form action="db.php" method="post" class="form-study">
-		  <div class="form-study">
+		</div>	
+	</div>
+	<form action="db.php" method="post" class="form-study">
+		  <div class="form-study padLabel">
 		    <label for="name">Enter Name: </label>
 		    <input type="text" name="name" id="name" required>
 		  </div>
-		  <div class="form-study">
+		  <div class="form-study padButton">
 		    <input type="submit" name="sign" value="Sign!">
 		  </div>
-		  <div>
-		  	<p>
-		  		<?php
-echo $_POST['name'];
-?>
-		  	</p>
-		  </div>
 		</form>
-	</div>
+		<div class="allNames">
+<?php
+//Connexion à la base de données
+try {
+    $dbh = new PDO("mysql:host=localhost;dbname=nom_signataire", "root", "root");
+} catch (PDOException $e) {
+    echo 'Connexion échouée : ' . $e->getMessage();
+}
+$result = $dbh->query('SELECT nom FROM infos_tbl ORDER BY ID DESC LIMIT 0, 22');
+while($donnees = $result->fetch())
+{
+	echo '<p>'.htmlspecialchars($donnees['nom']).'</p>';
+}
+
+
+?>
+</div>
+
 	
 </body>
 </html>
