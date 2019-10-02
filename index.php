@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,7 +53,7 @@
 			</ul>
 		</div>	
 	</div>
-	<form action="db.php" method="post" class="form-study">
+	<form action="index.php" method="post" class="form-study">
 		  <div class="form-study padLabel">
 		    <label for="name">Enter Name: </label>
 		    <input type="text" name="name" id="name" required>
@@ -62,20 +63,8 @@
 		  </div>
 		</form>
 		<div class="allNames">
-<?php
-//Connexion à la base de données
-try {
-    $dbh = new PDO("mysql:host=localhost;dbname=nom_signataire", "root", "root");
-} catch (PDOException $e) {
-    echo 'Connexion échouée : ' . $e->getMessage();
-}
-// Récupération des noms
-$result = $dbh->query('SELECT nom FROM infos_tbl ORDER BY ID DESC LIMIT 0, 22');
-
-while($donnees = $result->fetch())
-{
-	echo '<p>'.htmlspecialchars($donnees['nom']).'</p>';
-}
+<?php 
+	include 'db.php';
 ?>
 		</div>	
 </body>
