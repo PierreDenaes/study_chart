@@ -10,12 +10,7 @@ if (isset ($_POST['sign'])){
                 $sth = $dbh->prepare("INSERT INTO infos_tbl (nom) VALUES(?)");
                 $sth->execute(array($_POST['name']));
             }
-// Redirection du visiteur vers la page index
-try {
-    $dbh = new PDO("mysql:host=localhost;dbname=nom_signataire", "root", "root");
-} catch (PDOException $e) {
-    echo 'Connexion échouée : ' . $e->getMessage();
-}
+          
 // Récupération des noms
 $result = $dbh->query('SELECT nom FROM infos_tbl ORDER BY ID DESC LIMIT 0, 22');
 
