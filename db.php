@@ -19,8 +19,4 @@ try {
 // Récupération des noms
 $result = $dbh->query('SELECT nom FROM infos_tbl ORDER BY ID DESC LIMIT 0, 22');
 
-
-
-
-
 ?>
