@@ -1,4 +1,6 @@
-
+<?php 
+include 'db.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,7 +66,10 @@
 		</form>
 		<div class="allNames">
 <?php 
-	include 'db.php';
+	while($donnees = $result->fetch())
+{
+	echo '<p>'.htmlspecialchars($donnees['nom']).'</p>';
+}
 ?>
 		</div>	
 </body>
