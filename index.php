@@ -59,8 +59,7 @@ include 'db.php';
   </div>
   <form action="index.php" method="post" class="form-study">
     <div class="form-study padLabel">
-      <label for="name">Enter Name: </label>
-      <input type="text" name="name" id="name" required>
+       <input type="text" name="name" placeholder="name" value="<?php echo $name; ?>">
     </div>
     <div class="form-study padButton">
       <input type="submit" name="sign" value="Sign!">
