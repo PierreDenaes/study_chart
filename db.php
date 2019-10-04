@@ -15,8 +15,9 @@ if (isset ($_POST['sign'])){
                 $res_n = $dbh->query("SELECT * FROM infos_tbl WHERE nom='$name'");
                 $existName = $res_n->rowCount();
                 //Insertion du nom dans la base de donnée
-                if($existName == 0) {
-                    $sth = $dbh->prepare("INSERT INTO infos_tbl (nom) VALUES(?)");
+                if(is_string($name) && $existName == 0) {
+                    $sth = $dbh->prepare("INSERT INTO infos_tbl (nom) VALUES(:name)");
+                    $sth->bindParam('name', $name,PDO::PARAM_STR);
                     $sth->execute(array($_POST['name']));
                 }else {
                     $result2 = "Cette personne existe deja";
