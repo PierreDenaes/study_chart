@@ -65,6 +65,11 @@ include 'db.php';
       <input type="submit" name="sign" value="Sign!">
     </div>
   </form>
+  <div class="existname">
+    <?php 
+    echo '<p>'.($result2).'</p>';
+    ?>
+  </div>
   <div class="allNames">
     <?php 
 	while($donnees = $result->fetch())

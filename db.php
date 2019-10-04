@@ -16,10 +16,9 @@ if (isset ($_POST['sign'])){
                     $sth = $dbh->prepare("INSERT INTO infos_tbl (nom) VALUES(?)");
                     $sth->execute(array($_POST['name']));
                 }else {
-                    echo "Cette personne existe déja";
+                    $result2 = "Cette personne existe deja";
                 }
             }
           
 // Récupération des noms
 $result = $dbh->query('SELECT nom FROM infos_tbl ORDER BY ID DESC LIMIT 0, 22');
-?>

@@ -70,3 +70,8 @@ ul {
 	background-color: white;
 	font-family: 'Mansalva', cursive;
 }
+.existname {
+	color: red;
+	font-size: 2em;
+	margin: 2% auto;
+}
