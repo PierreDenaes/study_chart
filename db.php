@@ -10,8 +10,8 @@ try {
 }
 // Vérification et Insertion du nom à l'aide d'une requête préparée
 if (isset ($_POST['sign'])){
-    //Vérification du nom dans la base de donnée
-                $name = $_POST['name'];
+    //Vérification du nom dans la base de donnée avec sécurisation injection type mysql
+                $name = stripslashes(htmlentities(htmlspecialchars($_POST['name'])));
                 $res_n = $dbh->query("SELECT * FROM infos_tbl WHERE nom='$name'");
                 $existName = $res_n->rowCount();
                 //Insertion du nom dans la base de donnée

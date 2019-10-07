@@ -59,7 +59,7 @@ include 'db.php';
   </div>
   <form action="index.php" method="post" class="form-study">
     <div class="form-study padLabel">
-       <input type="text" name="name" placeholder="name" value="<?php htmlspecialchars($_POST['name']); ?>">
+       <input type="text" name="name" placeholder="name">
     </div>
     <div class="form-study padButton">
       <input type="submit" name="sign" value="Sign!">
@@ -74,7 +74,7 @@ include 'db.php';
     <?php 
 	while($donnees = $result->fetch())
 {
-	echo '<p>'.htmlspecialchars($donnees['nom']).'</p>';
+	echo '<p>'.$donnees['nom'].'</p>';
 }
 ?>
   </div>
