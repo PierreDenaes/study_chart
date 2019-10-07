@@ -59,7 +59,7 @@ include 'db.php';
   </div>
   <form action="index.php" method="post" class="form-study">
     <div class="form-study padLabel">
-       <input type="text" name="name" placeholder="name">
+       <input type="text" name="name" placeholder="name" required="required">
     </div>
     <div class="form-study padButton">
       <input type="submit" name="sign" value="Sign!">
