@@ -7,7 +7,7 @@ include 'db.php';
 <head>
   <meta charset="UTF-8">
   <title>Charte des apprenant.e.s</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="https://dnadadenaes.com/style.css">
 
 </head>
 
@@ -78,6 +78,15 @@ include 'db.php';
 }
 ?>
   </div>
+  <div class="customAudio">
+    <audio 
+        controls autoplay volume="0.1"
+        src="https://dnadadenaes.com/music/BobMarleyNaturalMystic.mp3">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+  </div>
+  
 </body>
 
 </html>

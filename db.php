@@ -1,7 +1,7 @@
 <?php
  // Connexion à la base de données
 try {
-    $dbh = new PDO("mysql:host=localhost;dbname=nom_signataire", "root", "root",[
+    $dbh = new PDO("mysql:host=db5000192387.hosting-data.io;dbname=dbs187224", "dbu107260", "Root-13600",[
         PDO::ATTR_EMULATE_PREPARES => false, 
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
     ]);
